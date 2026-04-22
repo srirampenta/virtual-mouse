@@ -1,0 +1,98 @@
+The AI Virtual Mouse System is a project based on computer vision that lets users control their computer mouse with hand gestures. It uses a webcam to detect hand movements and translates them into cursor actions such as moving, clicking, and scrolling.
+
+This project employs hand tracking and gesture recognition to create a touchless interaction system between humans and computers.
+
+Features
+Cursor movement using the index finger
+Left-click using the thumb and index finger
+Scroll up/down using finger combinations
+Show desktop using a fist gesture
+Smooth cursor movement with interpolation
+Real-time webcam display using a GUI
+Technologies Used
+Python
+OpenCV (Computer Vision)
+MediaPipe (Hand Tracking)
+PyAutoGUI (Mouse Control)
+NumPy (Mathematical operations)
+Tkinter (GUI Interface)
+PIL (Image Processing)
+Dependencies
+
+Install all required libraries using:
+
+pip install opencv-python mediapipe pyautogui numpy pillow
+Required Modules:
+cv2
+mediapipe
+pyautogui
+numpy
+PIL
+tkinter (comes pre-installed with Python)
+How It Works
+Video Capture
+
+The webcam captures real-time video using OpenCV.
+
+Hand Detection
+
+MediaPipe detects hand landmarks, such as fingers and joints.
+
+Gesture Recognition
+
+Specific finger positions are analyzed:
+
+Index finger up → Move cursor
+Thumb + Index close → Click
+Two fingers up → Scroll up
+Three fingers up → Scroll down
+Fist → Show desktop
+Cursor Control
+
+PyAutoGUI maps hand movement to screen coordinates.
+
+Smoothing Algorithm
+
+This reduces jitter for stable cursor movement.
+
+GUI Display
+
+Tkinter shows a live camera feed and controls (Start/Stop).
+
+How to Run
+
+Clone the repository or download the project.
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+(or install manually as listed above)
+
+Run the script:
+
+python main.py
+
+Click Start AI Mouse to begin.
+
+Gesture Controls
+
+Gesture | Action
+
+Index Finger Up | Move Cursor
+Thumb + Index | Left Click
+Index + Middle | Scroll Up
+Index + Middle + Ring | Scroll Down
+Fist | Show Desktop
+Requirements
+Webcam (mandatory)
+Good lighting for accurate detection
+Python 3.8+
+Future Improvements
+Right-click gesture
+Multi-hand support
+Custom gesture mapping
+Performance optimization using GPU
+Author
+
+Developed as part of an internship project in the AI and ML domain, this system showcases real-time computer vision and human-computer interaction skills.
